@@ -77,7 +77,22 @@ model_type='yolov8m'
 Number_of_Eval_Image = 16000
 Total_Training_Image = 39895
 ```
+Training Graph
+<img width="100%" src="https://github.com/dungdo123/bee_disease_detection/raw/2dff1f4e61e8e6bd1776f197da6b091f2b9bf61f/resource/training_graph.png"></a>
 
+</details>
 
+<details open>
+<summary>Performance on Test Set</summary>
+
+```bash
+Number_of_Test_Image = 32000
+```
+
+PR curve on Test Set
+<img width="100%" src="https://github.com/dungdo123/bee_disease_detection/raw/8bd9d12e8afd16d2ce9b1f236615cc8fc289fdae/resource/pr_curve_test_set.png"></a>
+
+Confusion Matrix on Test Set
+<img width="100%" src="https://github.com/dungdo123/bee_disease_detection/raw/8bd9d12e8afd16d2ce9b1f236615cc8fc289fdae/resource/confusion_matrix_on_testset.png"></a>
 
 </details>
