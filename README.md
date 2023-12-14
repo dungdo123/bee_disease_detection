@@ -36,7 +36,7 @@ Output: output_tensor = float32[1,11,8400]
 <summary>Task</summary>
 
 ```bash
-Model Task: Object Detection
+Model Task: Object_Detection
 ```
 
 </details>
@@ -64,11 +64,35 @@ batch_size=32
 learning_rate=0.01
 input_size=640
 model_type='yolov8m'
+
+# Optimizer
+momentum= 0.937  # SGD momentum/Adam beta1
+weight_decay= 0.0005  # optimizer weight decay 5e-4
+
+# Loss function: box_loss, cls_loss, dfl loss
+box = 7.5  # box loss gain
+cls = 0.5  # cls loss gain (scale with pixels)
+dfl = 1.5  # dfl loss gain
+
+# Augmentation
+hsv_h = 0.015  # image HSV-Hue augmentation (fraction)
+hsv_s = 0.7  # image HSV-Saturation augmentation (fraction)
+hsv_v = 0.4  # image HSV-Value augmentation (fraction)
+degrees = 0.0  # image rotation (+/- deg)
+translate = 0.1  # image translation (+/- fraction)
+scale = 0.5  # image scale (+/- gain)
+shear = 0.0  # image shear (+/- deg)
+perspective = 0.0  # image perspective (+/- fraction), range 0-0.001
+flipud = 0.0  # image flip up-down (probability)
+fliplr = 0.5  # image flip left-right (probability)
+mosaic = 1.0  # image mosaic (probability)
+mixup = 0.0  # image mixup (probability)
+copy_paste = 0.0  # segment copy-paste (probability)
 ```
 
 </details>
 
-## <div align="center">Evaluation</div>
+## <div align="center">Evaluation Metric</div>
 
 <details open>
 <summary>Training Graph</summary>
